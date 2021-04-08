@@ -1,29 +1,39 @@
 C'est un qui veut gagner des millions éducatif
+But: Permettre aux étudiants de réviser de manière décontracté 
+        avec un Jean-Pierre Fouqueau qui met la pression.
+
+Déroulement d'une session:
 
 -Un utilisateur créer son compte ou se connecte.
 -Il lance une partie et choisit une catégorie de questions.
-    Bonus: Possibilitée de choisir une catégorie différente à chaque question. 
+    Perspective d'évolution: Possibilitée de choisir une catégorie différente à chaque question. 
             (Potentiellement parmi un sous-set de catégories)
 
-On pose 10 questions de cette manière:
+On pose 10 questions par de difficulté croissante de cette manière:
 -Une question apparait:
-    .Soit il répond
-    .Soit il utilise un joker (seulement le 50/50 est disponible au début)
-        Bonus: Implémenter l'avis du public et d'autres jokers
-    -Si l'utilisateur a bon:
-        .On incrémente le score, et la note et on passe à la question suivante
-        .Si il n'y a plus de questions la partie se finie, l'utilisateur a 20/20, bravo.
+    --Soit il utilise un joker (seulement le 50/50 est disponible au début)
+        Perspective d'évolution: Implémenter l'avis du public et d'autres jokers
+    --Soit il répond
+        ---Si l'utilisateur a bon:
+            .On incrémente le score, et la note et on passe à la question suivante
+            .Si il n'y a plus de questions la partie se finie, l'utilisateur a 20/20, bravo.
             On incrémente le score global de l'utilisateur par le score de la partie.
             
-    -Si l'utilisateur a tord:
-        .La partie s'arrête, le score global n'est pas modifié
+        ---Si l'utilisateur a tord:
+            .La partie s'arrête, le score global n'est pas modifié
+
 -La partie est terminée, On recalcule la moyenne.
 
 
 Les questions ont:
     1 catégorie
     1 niveau de difficulté
+    1 bonne réponse
+    3 mauvaises réponses
 
 Les catégories sont les 4 masters + Licence
 
 On a des utilisateurs, chacun avec un score global, leur moyenne sur 20
+    Perspective d'évolution: Affichage de l'évolution des stats de l'user, leaderboard
+
+
